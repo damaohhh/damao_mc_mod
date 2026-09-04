@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "damao-zl-mod",
+	"version": "${version}",
+	"name": "damao zl Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/damao-zl-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"top.damao_zhiling.DamaoZlMod"
+		],
+		"client": [
+			"top.damao_zhiling.client.DamaoZlModClient"
+		],
+		"fabric-datagen": [
+			"top.damao_zhiling.client.DamaoZlModDataGenerator"
+		]
+	},
+	"mixins": [
+		"damao-zl-mod.mixins.json",
+		{
+			"config": "damao-zl-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
